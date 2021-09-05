@@ -84,3 +84,9 @@
     height: 60px;
     border: 1px solid black;
 }
+
+@media (max-width: 540px) {
+    .megaWrapper {
+        flex-direction: column;
+    }
+}

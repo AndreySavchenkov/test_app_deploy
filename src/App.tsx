@@ -12,13 +12,17 @@ function App() {
     let [startValue, setStartValue] = useState<number>(0)
     let [count, setCount] = useState<number>(startValue)
 
+
+
     const addMaxValue = (e: React.FormEvent<HTMLInputElement>) => {
         const newMaxValue = +e.currentTarget.value;
+        localStorage.setItem('maxValue', JSON.stringify(newMaxValue))
         setMaxValue(newMaxValue)
     }
 
     const addStartValue = (e: React.FormEvent<HTMLInputElement>) => {
         const newStartValue = +e.currentTarget.value;
+        localStorage.setItem('startValue', JSON.stringify(newStartValue))
         setStartValue(newStartValue)
     }
 
